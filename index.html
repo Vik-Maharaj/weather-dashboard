@@ -11,6 +11,9 @@
   <body>
     
   <!-- need a header section with a main title -->
+  <header>
+    <h1>VIK'S WEATHER DASHBOARD</h1>
+  </header>
 
 
 
@@ -18,6 +21,31 @@
   a search button,
   a div line,
   and then a list of the eight most visited cities -->
+  <section>
+    <div>
+      <h3>Search for a City:</h3>
+      <form>
+        <input name="city" id="city" type="text" autofocus="true" class="form-input"/>
+        <br>
+        <button type="submit" class="btn">Search</button>
+      </form>
+    </section>
+
+    <div>
+      <h3>Recently Visited Cities: <span></span></h3>
+      <div>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
 
 
 
@@ -27,7 +55,19 @@
   the current wind, 
   the current humidity,
   the current UV index with a color coded background showing whether it's favorable or not -->
-
+  <div class="card">
+    <div>
+      <h3>Currently Displayed City</h3>
+      <h3>Current Date</h3>
+      <span>icon</span>
+    </div>
+    <ol>
+      <li>Temp</li>
+      <li>Wind</li>
+      <li>Humidity</li>
+      <li>UV Index</li><span>UV Icon</span>
+    </ol>
+  </div>
 
 
   <!-- need another section showing the 5 day forecast for the selected city with a section header, and with each colum showing the date,
@@ -35,10 +75,74 @@
   that day's project temp,
   that day's project wind,
   that day's project humidity -->
+  <div>
+    <h4>5-Day Forecast</h4>
+      <div class="forecast-card">
+        <div>
+          <h4>Current Date</h4>
+          <span>icon</span>
+        </div>
+          <ol>
+              <li>Temp</li>
+              <li>Wind</li>
+              <li>Humidity</li>
+          </ol>
+      </div>
 
+      <div class="forecast-card">
+        <div>
+          <h4>Current Date</h4>
+          <span>icon</span>
+        </div>
+          <ol>
+              <li>Temp</li>
+              <li>Wind</li>
+              <li>Humidity</li>
+          </ol>
+      </div>
+
+      <div class="forecast-card">
+        <div>
+          <h4>Current Date</h4>
+          <span>icon</span>
+        </div>
+          <ol>
+              <li>Temp</li>
+              <li>Wind</li>
+              <li>Humidity</li>
+          </ol>
+      </div>
+
+      <div class="forecast-card">
+        <div>
+          <h4>Current Date</h4>
+          <span>icon</span>
+        </div>
+          <ol>
+              <li>Temp</li>
+              <li>Wind</li>
+              <li>Humidity</li>
+          </ol>
+      </div>
+
+      <div class="forecast-card">
+        <div>
+          <h4>Current Date</h4>
+          <span>icon</span>
+        </div>
+          <ol>
+              <li>Temp</li>
+              <li>Wind</li>
+              <li>Humidity</li>
+          </ol>
+      </div>
+  </div>
 
 
   <!-- need a footer section -->
+  <footer>
+    <h3>by Vik Maharaj</h3>
+  </footer>
 
 
 
