@@ -10,142 +10,90 @@
 
   <body>
     
-  <!-- need a header section with a main title -->
-  <header>
-    <h1>VIK'S WEATHER DASHBOARD</h1>
-  </header>
+    
+    <header>
+      <div>
+        <h1>Weather Dashboard</h1>
+      </div>
+    </header>
 
+  
+    <section>
+        <div>
+          <div>
+            <article>
+              <h2> Search for a City</h2>
+              <form id="city-search">
+                <input name="city" id="city" type="text" autofocus="true" placeholder="Enter City Here"/>
+              </form>
+              <button id="search"> Search </button>
+            </article>
+          </div>
+        </div>
+    </section>
+  
 
-
-  <!-- need a city seearch section that has a user input for city name, 
-  a search button,
-  a div line,
-  and then a list of the eight most visited cities -->
-  <section>
-    <div>
-      <h3>Search for a City:</h3>
-      <form>
-        <input name="city" id="city" type="text" autofocus="true" class="form-input"/>
-        <br>
-        <button type="submit" class="btn">Search</button>
-      </form>
+    <article>
+          <div>
+            <div>
+              <div id="current-city-container"></div>
+              <h2><span id="displayed-city"></span></h2>
+              <h3>
+                <p id="currentWeather"></p>
+              </h3>
+                <p id="displayWeather"></p>
+            </div>
+          </div>
+    </article>
+      
+  
+    <section>
+        <div>
+          <div>
+            <h2>Recent Cities:</h2>
+            <article id="myCities">
+            </article>
+            <button id="deleteButton">Remove Cities</button>
+          </div>
+        </div>
     </section>
 
-    <div>
-      <h3>Recently Visited Cities: <span></span></h3>
-      <div>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </div>
+  
+    <article>
+          <div>
+            <h2>5-Day Forecast:</h2>
+            <div>
+              <div id="date1"></div>
+              <p id="day1"></p>
+            </div>
+            <div>
+              <div id="date2"></div>
+              <p id="day2"></p>
+            </div>
+            <div>
+              <div id="date3"></div>
+              <p id="day3"></p>
+            </div>
+            <div>
+              <div id="date4"></div>
+              <p id="day4"></p>
+            </div>  
+            <div>
+              <div id="date5"></div>
+              <p id="day5"></p>
+            </div>    
+          </div>
+    </article>
+
+    
+  
+    <footer id="footer">
+      <p> &copy; Copyright Vik Maharaj 2022</p>
+    </footer>
 
 
 
-  <!-- need a section for the currently picked city that shows the city name and date at the top;
-  an icon next to the date showing the current weather condition
-  then a list below showing the current temp, 
-  the current wind, 
-  the current humidity,
-  the current UV index with a color coded background showing whether it's favorable or not -->
-  <div class="card">
-    <div>
-      <h3>Currently Displayed City</h3>
-      <h3>Current Date</h3>
-      <span>icon</span>
-    </div>
-    <ol>
-      <li>Temp</li>
-      <li>Wind</li>
-      <li>Humidity</li>
-      <li>UV Index</li><span>UV Icon</span>
-    </ol>
-  </div>
-
-
-  <!-- need another section showing the 5 day forecast for the selected city with a section header, and with each colum showing the date,
-  an icon with the day's aniticapted weather,
-  that day's project temp,
-  that day's project wind,
-  that day's project humidity -->
-  <div>
-    <h4>5-Day Forecast</h4>
-      <div class="forecast-card">
-        <div>
-          <h4>Current Date</h4>
-          <span>icon</span>
-        </div>
-          <ol>
-              <li>Temp</li>
-              <li>Wind</li>
-              <li>Humidity</li>
-          </ol>
-      </div>
-
-      <div class="forecast-card">
-        <div>
-          <h4>Current Date</h4>
-          <span>icon</span>
-        </div>
-          <ol>
-              <li>Temp</li>
-              <li>Wind</li>
-              <li>Humidity</li>
-          </ol>
-      </div>
-
-      <div class="forecast-card">
-        <div>
-          <h4>Current Date</h4>
-          <span>icon</span>
-        </div>
-          <ol>
-              <li>Temp</li>
-              <li>Wind</li>
-              <li>Humidity</li>
-          </ol>
-      </div>
-
-      <div class="forecast-card">
-        <div>
-          <h4>Current Date</h4>
-          <span>icon</span>
-        </div>
-          <ol>
-              <li>Temp</li>
-              <li>Wind</li>
-              <li>Humidity</li>
-          </ol>
-      </div>
-
-      <div class="forecast-card">
-        <div>
-          <h4>Current Date</h4>
-          <span>icon</span>
-        </div>
-          <ol>
-              <li>Temp</li>
-              <li>Wind</li>
-              <li>Humidity</li>
-          </ol>
-      </div>
-  </div>
-
-
-  <!-- need a footer section -->
-  <footer>
-    <h3>by Vik Maharaj</h3>
-  </footer>
-
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
