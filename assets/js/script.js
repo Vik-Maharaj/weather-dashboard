@@ -31,6 +31,21 @@ var searchHandler = function(event) {
 };
 
 
+
+var addCity = function(searchName) {
+    currentCityContainer.textContent = "";
+    displayedCity.textContent = searchName;
+    var saveCity = document.createElement("button");
+    saveCity.textContent = searchName;
+    saveCity.addEventListener("click", function () {
+        displayedCity.textContent = this.textContent;
+        findCityName(this.textContent);
+    });
+    myCities.append(saveCity);
+};
+
+
+
 var findCityName = function(searchedCity) {
     var apiCityName = "https://api.openweathermap.org/data/2.5/weather?q=" + searchedCity + "&appid=07bdc8ba3d40336f00288a88b3d7d15f";
 
@@ -96,4 +111,13 @@ var findCityData = function (lat, lon) {
         .catch(function (error) {
             alert("Unable to Connect");
         })
+};
+
+
+// js for setting the most recently displayed cities into local storage
+
+var saveIntoStorage = function () {
+    var savedCities = JSON.parse(localStorage.getItem("cities")) || [];
+    savedCities.push(city.value);
+    localStorage.setItem("cities", JSON.stringify(savedCities));
 };
