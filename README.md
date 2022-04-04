@@ -2,37 +2,18 @@
 
 ## Description
 
-Intro Statment
+For someone who travels a lot, keeping up with the weather at their next destination is really important. It is imperative to know what to expect before they arrive at their next destination, so for a person who needs to keep up with the forecasts of several cities at a glance, they have that advanced knowledge so they can plan accordingly.
 
-Purpose of this project, which includes the following features:
+Enter the purpose of this project, to allow a user to select a city of their choice and quickly see the current weather of that location, and the expected weather for the next fives days. The app runs entirely in the browser, can be viewed anywhere online, and includes the following features:
 
-- feature 01
-- feature 02
+- When the user searches for a city, they are presented with the current and future conditions for that city
+- That same city is then added to their search history and displayed to the page
+- Whent he user views current weather conditions for a city they are presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
+- When the user views the UV Index, they are presented with a color that indicates whether the conditions are favorable, moderate, or severe
+- Whent the user views the future weather conditions for that city, they are presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
+- When the user clicks on their search history of previously selected cities, they are again presented with the information from that city
 
-Ending statement
-
-//
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
-Acceptance Criteria
-
-```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-//
-
-Link to the deployed website: 
+Link to the deployed website: https://vik-maharaj.github.io/weather-dashboard/
 
 
 ## Installation
