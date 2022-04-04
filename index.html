@@ -18,8 +18,9 @@
       </div>
     </header>
 
+  <div class="columns">
   
-    <section class="section">
+    <section class="section column is-one-third">
         <div class="box">
           <div>
             <article>
@@ -34,7 +35,7 @@
     </section>
   
 
-    <article class="section">
+    <article class="section column is-two-thirds">
           <div class="box">
             <div>
               <div id="current-city-container"></div>
@@ -46,9 +47,13 @@
             </div>
           </div>
     </article>
-      
   
-    <section class="section">
+  </div>  
+  
+  <div class="columns">
+
+  
+    <section class="section column is-one-third">
         <div class="box">
           <div>
             <h2 class="title">Recent Cities:</h2>
@@ -60,33 +65,36 @@
     </section>
 
   
-    <article class="section">
-          <div class="box">
-            <h2>5-Day Forecast:</h2>
-            <div>
-              <div id="date1" ></div>
-              <p id="day1" class="column"></p>
+    <article class="section tile is-ancestor column is-two-thirds">
+          <div class="box tile is-parent">
+            <div class="tile">
+            <h2 class="title">5-Day Forecast:</h2>
             </div>
-            <div>
-              <div id="date2"></div>
-              <p id="day2"></p>
+            <div class="card tile is-child box">
+              <div id="date1" class="card-header-title"></div>
+              <p id="day1" class="card-content"></p>
             </div>
-            <div>
-              <div id="date3"></div>
-              <p id="day3"></p>
+            <div class="card tile is-child box">
+              <div id="date2" class="card-header-title"></div>
+              <p id="day2" class="card-content"></p>
             </div>
-            <div>
-              <div id="date4"></div>
-              <p id="day4"></p>
+            <div class="card tile is-child box">
+              <div id="date3" class="card-header-title"></div>
+              <p id="day3" class="card-content"></p>
+            </div>
+            <div class="card tile is-child box">
+              <div id="date4" class="card-header-title"></div>
+              <p id="day4" class="card-content"></p>
             </div>  
-            <div>
-              <div id="date5"></div>
-              <p id="day5"></p>
+            <div class="card tile is-child box">
+              <div id="date5" class="card-header-title"></div>
+              <p id="day5" class="card-content"></p>
             </div>    
           </div>
     </article>
 
-    
+  </div>  
+  
   
     <footer id="footer" class="footer">
       <div class="content has-text-centered">
