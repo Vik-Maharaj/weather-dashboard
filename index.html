@@ -12,33 +12,33 @@
   <body>
     
     
-    <header>
-      <div>
-        <h1>Weather Dashboard</h1>
+    <header class="hero is-primary">
+      <div class="hero-body">
+        <h1 class="title has-text-centered">Weather Dashboard</h1>
       </div>
     </header>
 
   
-    <section>
-        <div>
+    <section class="section">
+        <div class="box">
           <div>
             <article>
-              <h2> Search for a City</h2>
-              <form id="city-search">
+              <h2 class="title"> Search for a City</h2>
+              <form id="city-search" class="field">
                 <input name="city" id="city" type="text" autofocus="true" placeholder="Enter City Here"/>
               </form>
-              <button id="search" class="button is-primary"> Search </button>
+              <button id="search" class="button is-primary is-outlined"> Search </button>
             </article>
           </div>
         </div>
     </section>
   
 
-    <article>
-          <div>
+    <article class="section">
+          <div class="box">
             <div>
               <div id="current-city-container"></div>
-              <h2><span id="displayed-city"></span></h2>
+              <h2 class="title"><span id="displayed-city"></span></h2>
               <h3>
                 <p id="currentWeather"></p>
               </h3>
@@ -48,24 +48,24 @@
     </article>
       
   
-    <section>
-        <div>
+    <section class="section">
+        <div class="box">
           <div>
-            <h2>Recent Cities:</h2>
+            <h2 class="title">Recent Cities:</h2>
             <article id="myCities">
             </article>
-            <button id="deleteButton">Remove Cities</button>
+            <button id="deleteButton" class="button is-primary">Remove Cities</button>
           </div>
         </div>
     </section>
 
   
-    <article>
-          <div>
+    <article class="section">
+          <div class="box">
             <h2>5-Day Forecast:</h2>
             <div>
-              <div id="date1"></div>
-              <p id="day1"></p>
+              <div id="date1" ></div>
+              <p id="day1" class="column"></p>
             </div>
             <div>
               <div id="date2"></div>
@@ -88,8 +88,10 @@
 
     
   
-    <footer id="footer">
+    <footer id="footer" class="footer">
+      <div class="content has-text-centered">
       <p> &copy; Copyright Vik Maharaj 2022</p>
+      </div>
     </footer>
 
 
