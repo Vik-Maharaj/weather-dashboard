@@ -117,13 +117,15 @@ var findCityData = function (lat, lon) {
 // logic for setting the most recently displayed cities into local storage
 
 var saveIntoStorage = function () {
-    var savedCities = JSON.parse(localStorage.getItem("cities"));
+    var savedCities = JSON.parse(localStorage.getItem("cities"))  || [];
     savedCities.push(city.value);
     localStorage.setItem("cities", JSON.stringify(savedCities));
 };
 
+
+
 var displaySavedCities = function () {
-    var savedCities = JSON.parse(localStorage.getItem("cities"));
+    var savedCities = JSON.parse(localStorage.getItem("cities"))  || [];
     for (var i = 0; i < savedCities.length; i++) {
         var savedCity = document.createElement("button");
         savedCity.textContent = savedCities[i];
@@ -142,6 +144,18 @@ search.addEventListener("click", function () {
     addCity(city.value);
     saveIntoStorage();
 });
+
+
+
+
+// logic for removing cities from local storage
+
+var removeCities = function () {
+    localStorage.removeItem("cities");
+    myCities.innerHTML = "";
+};
+
+deleteButton.addEventListener("click", removeCities);
 
 
 
