@@ -13,7 +13,7 @@ var date = document.getElementById("date1");
 
 
 
-// js for using city search user text input to fetch city information
+// logic for using city search user text input to fetch city information
 
 var searchHandler = function(event) {
     event.preventDefault();
@@ -114,10 +114,55 @@ var findCityData = function (lat, lon) {
 };
 
 
-// js for setting the most recently displayed cities into local storage
+// logic for setting the most recently displayed cities into local storage
 
 var saveIntoStorage = function () {
     var savedCities = JSON.parse(localStorage.getItem("cities")) || [];
     savedCities.push(city.value);
     localStorage.setItem("cities", JSON.stringify(savedCities));
+};
+
+
+
+
+// logic for displaying the five-day forecast for the currently displayed city
+
+var fiveDayForecast = function(forecast) {
+
+    currentWeather.innerHTML = "";
+    var currentDate = document.createElement("p")
+    var chosenDate = new Date(forecast[0].dt * 1000).toLocaleDateString();
+    currentDate.textContent = chosenDate;
+    document.getElementById("currentWeather").appendChild(currentDate);
+
+    for (let i = 0; i < 5; i++) {
+
+        var date = document.getElementById(`date${i + 1}`)
+        date.innerHTML = "";
+
+        var day = document.getElementById(`day${i + 1}`);
+        day.innerHTML = "";
+
+        var dateData = document.createElement("div")
+        var dateEl = new Date(forecast[i + 1].dt * 1000).toLocaleDateString();
+        dateData.textContent = dateEl;
+        document.getElementById(`date${i + 1}`).appendChild(dateData);
+
+        var currentWeatherIcon = `https://openweathermap.org/img/w/${forecast[i].weather[0].icon}.png`
+        var forecastIcon = document.createElement("img")
+        forecastIcon.setAttribute("src", currentWeatherIcon);
+        document.getElementById(`day${i + 1}`).appendChild(forecastIcon);
+
+        var forecastTemp = document.createElement("p");
+        forecastTemp.textContent = "Tempature:" + " " + forecast[i].temp.day + " " + "°F";
+        document.getElementById(`day${i + 1}`).appendChild(forecastTemp);
+
+        var forecastWind = document.createElement("p")
+        forecastWind.textContent = "Wind Speed:" + " " + forecast[i].wind_speed + " " + "MPH";
+        document.getElementById(`day${i + 1}`).appendChild(forecastWind);
+
+        var forecastHumidity = document.createElement("p")
+        forecastHumidity.textContent = "Humidity:" + " " + forecast[i].humidity + "%";
+        document.getElementById(`day${i + 1}`).appendChild(forecastHumidity);
+    }
 };
