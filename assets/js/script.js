@@ -37,6 +37,7 @@ var addCity = function(searchName) {
     displayedCity.textContent = searchName;
     var saveCity = document.createElement("button");
     saveCity.textContent = searchName;
+    saveCity.classList.add("button", "is-medium", "is-fullwidth", "is-primary", "is-outlined");
     saveCity.addEventListener("click", function () {
         displayedCity.textContent = this.textContent;
         findCityName(this.textContent);
@@ -75,7 +76,7 @@ var findCityData = function (lat, lon) {
                 var currentWeatherIcon = `https://openweathermap.org/img/w/${data.current.weather[0].icon}.png`
                 var weatherIcon = document.createElement("img")
                 weatherIcon.setAttribute("src", currentWeatherIcon);
-                weatherIcon.classList.add("icon");
+                weatherIcon.classList.add("icon", "is-large");
                 displayWeather.appendChild(weatherIcon);
 
                 var currentTemp = data.current.temp;
@@ -100,6 +101,13 @@ var findCityData = function (lat, lon) {
                 var uvi = document.createElement("p");
                 uvi.classList.add("infoContent");
                 uvi.textContent = "UV Index:" + " " + currentUvi;
+                if (currentUvi < 3) {
+                    uvi.classList.add("has-text-weight-bold", "has-text-success");
+                } else if (currentUvi < 7) {
+                    uvi.classList.add("has-text-weight-bold", "has-text-warning-dark");
+                } else {
+                    uvi.classList.add("has-text-weight-bold", "has-text-danger");
+                }
                 displayWeather.appendChild(uvi);
 
                 fiveDayForecast(data.daily);
@@ -129,6 +137,7 @@ var displaySavedCities = function () {
     for (var i = 0; i < savedCities.length; i++) {
         var savedCity = document.createElement("button");
         savedCity.textContent = savedCities[i];
+        savedCity.classList.add("button", "is-medium", "is-fullwidth", "is-primary", "is-outlined");
         savedCity.addEventListener("click", function () {
         displayedCity.textContent = this.textContent;
         findCityName(this.textContent);
@@ -186,6 +195,7 @@ var fiveDayForecast = function(forecast) {
         var currentWeatherIcon = `https://openweathermap.org/img/w/${forecast[i].weather[0].icon}.png`
         var forecastIcon = document.createElement("img")
         forecastIcon.setAttribute("src", currentWeatherIcon);
+        forecastIcon.classList.add("icon", "is-large");
         document.getElementById(`day${i + 1}`).appendChild(forecastIcon);
 
         var forecastTemp = document.createElement("p");
