@@ -37,7 +37,7 @@ var addCity = function(searchName) {
     displayedCity.textContent = searchName;
     var saveCity = document.createElement("button");
     saveCity.textContent = searchName;
-    saveCity.classList.add("button", "is-medium", "is-fullwidth", "is-primary", "is-outlined");
+    saveCity.classList.add("button", "is-medium", "is-fullwidth", "is-primary", "is-outlined", "is-capitalized");
     saveCity.addEventListener("click", function () {
         displayedCity.textContent = this.textContent;
         findCityName(this.textContent);
@@ -137,7 +137,7 @@ var displaySavedCities = function () {
     for (var i = 0; i < savedCities.length; i++) {
         var savedCity = document.createElement("button");
         savedCity.textContent = savedCities[i];
-        savedCity.classList.add("button", "is-medium", "is-fullwidth", "is-primary", "is-outlined");
+        savedCity.classList.add("button", "is-medium", "is-fullwidth", "is-primary", "is-outlined", "is-capitalized");
         savedCity.addEventListener("click", function () {
         displayedCity.textContent = this.textContent;
         findCityName(this.textContent);
