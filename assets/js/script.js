@@ -117,10 +117,31 @@ var findCityData = function (lat, lon) {
 // logic for setting the most recently displayed cities into local storage
 
 var saveIntoStorage = function () {
-    var savedCities = JSON.parse(localStorage.getItem("cities")) || [];
+    var savedCities = JSON.parse(localStorage.getItem("cities"));
     savedCities.push(city.value);
     localStorage.setItem("cities", JSON.stringify(savedCities));
 };
+
+var displaySavedCities = function () {
+    var savedCities = JSON.parse(localStorage.getItem("cities"));
+    for (var i = 0; i < savedCities.length; i++) {
+        var savedCity = document.createElement("button");
+        savedCity.textContent = savedCities[i];
+        savedCity.addEventListener("click", function () {
+        displayedCity.textContent = this.textContent;
+        findCityName(this.textContent);
+        });
+        myCities.append(savedCity);
+    }
+
+};
+
+displaySavedCities();
+search.addEventListener("click", function () {
+    findCityName(city.value);
+    addCity(city.value);
+    saveIntoStorage();
+});
 
 
 
@@ -166,3 +187,5 @@ var fiveDayForecast = function(forecast) {
         document.getElementById(`day${i + 1}`).appendChild(forecastHumidity);
     }
 };
+
+
