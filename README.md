@@ -2,16 +2,17 @@
 
 ## Description
 
-For someone who travels a lot, keeping up with the weather at their next destination is really important. It is imperative to know what to expect before they arrive at their next destination, so for a person who needs to keep up with the forecasts of several cities at a glance, they have that advanced knowledge so they can plan accordingly.
+For someone who travels a lot, staying up to date with the weather is really important. It is imperative to know what to expect weather-wise when traveling before they arrive at their next destination. That person needs the ability to look at forecasts for several cities at once, and have that advanced knowledge so they can plan accordingly.
 
-Enter the purpose of this project, to allow a user to select a city of their choice and quickly see the current weather of that location, and the expected weather for the next fives days. The app runs entirely in the browser, can be viewed anywhere online, and includes the following features:
+Enter the purpose of this project: to allow a user to select a city of their choice and quickly see the current weather of that location, and the expected weather for the next five days. The app runs entirely in the browser, can be viewed anywhere online, and includes the following features:
 
-- When the user searches for a city, they are presented with the current and future conditions for that city
-- That same city is then added to their search history and displayed to the page
-- Whent he user views current weather conditions for a city they are presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-- When the user views the UV Index, they are presented with a color that indicates whether the conditions are favorable, moderate, or severe
-- Whent the user views the future weather conditions for that city, they are presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-- When the user clicks on their search history of previously selected cities, they are again presented with the information from that city
+- When a user searches for a city, they are presented with the current and future weather conditions for that city
+- The currently displayed city is then added to the user’s search history and listed on the page
+- When a user views current weather conditions for a city they are presented with the city name, current date, icon of current weather conditions, temperature, humidity, wind speed, and UV index
+- When a user views the UV Index, they are presented with a color that indicates whether the conditions are favorable, moderate, or severe (green, yellow, or red)
+- When a user views the future weather conditions for that city, they are presented with a 5-day forecast that displays the date, icon of current weather conditions, temperature, wind speed, and humidity
+- When a user clicks on a city in their list of previously searched cities, they are again presented with the current weather information for that city
+
 
 Link to the deployed website: https://vik-maharaj.github.io/weather-dashboard/
 
